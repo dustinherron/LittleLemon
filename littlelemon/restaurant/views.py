@@ -18,3 +18,6 @@ class BookingViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset =Booking.objects.all()
     serializer_class = BookingSerializer
+
+def index(request):
+    return render(request, 'index.html', {})
